@@ -74,6 +74,41 @@ hist(credit_quant$Balance, main = "Histogram of Balance",
      xlab = "Balance")
 dev.off()
 
+png('../../images/boxplot-income.png')
+boxplot(credit_quant$Income, main = "Boxplot of Income", 
+     xlab = "Income", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-limit.png')
+boxplot(credit_quant$Limit, main = "Boxplot of Limit", 
+        xlab = "Limit", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-rating.png')
+boxplot(credit_quant$Rating, main = "Boxplot of Rating", 
+        xlab = "Rating", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-cards.png')
+boxplot(credit_quant$Cards, main = "Boxplot of Cards", 
+        xlab = "Cards", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-age.png')
+boxplot(credit_quant$Age, main = "Boxplot of Age", 
+        xlab = "Age", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-education.png')
+boxplot(credit_quant$Education, main = "Boxplot of Education", 
+        xlab = "Education", horizontal = T)
+dev.off()
+
+png('../../images/boxplot-balance.png')
+boxplot(credit_quant$Balance, main = "Boxplot of Balance", 
+        xlab = "Balance", horizontal = T)
+dev.off()
+
 #summary statistics for qualitative variables
 #tables of frequency and relative frequency
 
