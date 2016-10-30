@@ -9,7 +9,7 @@ credit <- read.csv('../../data/raw-credit.csv')
 credit_quant <- credit[,c("Income", "Limit", "Rating",
                           "Cards", "Age", "Education", "Balance")]
 
-credit_qual <- credit[,c("Gender", "Student", "Married", "Rating")]
+credit_qual <- credit[,c("Gender", "Student", "Married", "Ethnicity")]
 
 output_file <- "../../data/eda-output.txt"
 
@@ -76,4 +76,20 @@ dev.off()
 
 #summary statistics for qualitative variables
 #tables of frequency and relative frequency
+
+
+sink(output_file, append = T)
+cat("\nDescriptive Statistics of Qualitative Variables\n\nGender\n")
+data.frame(Frequency = summary(credit_qual$Gender), 
+           Proportion = summary(credit_qual$Gender) / length(credit_qual$Gender))
+cat("\nStudent\n")
+data.frame(Frequency = summary(credit_qual$Student), 
+           Proportion = summary(credit_qual$Student) / length(credit_qual$Student))
+cat("\nMarried\n")
+data.frame(Frequency = summary(credit_qual$Married), 
+           Proportion = summary(credit_qual$Married) / length(credit_qual$Married))
+cat("\nEthnicity\n")
+data.frame(Frequency = summary(credit_qual$Ethnicity), 
+           Proportion = summary(credit_qual$Ethnicity) / length(credit_qual$Ethnicity))
+sink()
 

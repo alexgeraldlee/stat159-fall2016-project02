@@ -27,3 +27,26 @@ Ranges
 Interquartile Ranges
    Income     Limit    Rating     Cards       Age Education   Balance 
   36.4635 2784.7500  190.0000    2.0000   28.2500    5.0000  794.2500 
+
+Descriptive Statistics of Qualitative Variables
+
+Gender
+       Frequency Proportion
+ Male        193     0.4825
+Female       207     0.5175
+
+Student
+    Frequency Proportion
+No        360        0.9
+Yes        40        0.1
+
+Married
+    Frequency Proportion
+No        155     0.3875
+Yes       245     0.6125
+
+Ethnicity
+                 Frequency Proportion
+African American        99     0.2475
+Asian                  102     0.2550
+Caucasian              199     0.4975
