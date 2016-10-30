@@ -93,3 +93,25 @@ data.frame(Frequency = summary(credit_qual$Ethnicity),
            Proportion = summary(credit_qual$Ethnicity) / length(credit_qual$Ethnicity))
 sink()
 
+#barcharts of the frequencies
+
+png('../../images/barchart-gender.png')
+plot(credit_qual$Gender, main = "Barchart of Gender", 
+     xlab = "Gender", ylab = "Frequency")
+dev.off()
+
+png('../../images/barchart-student.png')
+plot(credit_qual$Student, main = "Barchart of Student", 
+     xlab = "Student", ylab = "Frequency")
+dev.off()
+
+png('../../images/barchart-married.png')
+plot(credit_qual$Married, main = "Barchart of Married", 
+     xlab = "Married", ylab = "Frequency")
+dev.off()
+
+png('../../images/barchart-ethnicity.png')
+plot(credit_qual$Ethnicity, main = "Barchart of Ethnicity", 
+     xlab = "Ethnicity", ylab = "Frequency")
+dev.off()
+
