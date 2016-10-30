@@ -1,6 +1,6 @@
 
 
-all: credit-data
+all: eda regression report
 
 
 
@@ -13,6 +13,17 @@ data/raw-credit.csv:
 
 data/Credit.csv:
 	cd code/scripts && Rscript data-processing.R
+
+
+#exploratory data analysis
+eda: data/eda-output.txt
+
+data/eda-output.txt:
+	cd code/scripts && Rscript eda-script.R
+
+#regressions - 5 types (OLS, lasso, ridge, pcr, pslr)
+regression: 
+
 
 
 #remove the final report
