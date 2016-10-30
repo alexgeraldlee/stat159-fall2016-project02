@@ -150,3 +150,15 @@ plot(credit_qual$Ethnicity, main = "Barchart of Ethnicity",
      xlab = "Ethnicity", ylab = "Frequency")
 dev.off()
 
+#matrix of correlations for quantitative variables
+quant_corr <- round(cor(credit_quant), 4)
+sink(output_file, append = T)
+cat("\n\nCorrelation Matrix for Quantitative Variables\n")
+quant_corr
+sink()
+
+#scatterplot matrix of quantitative variables
+png('../../images/scatterplot-matrix.png')
+plot(credit_quant)
+dev.off()
+
