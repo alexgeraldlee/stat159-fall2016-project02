@@ -173,3 +173,26 @@ credit_anova
 sink()
 
 #conditional boxplots of Balance against qualitative variables
+png('../../images/conditional-boxplot-gender.png')
+boxplot(Balance ~ Gender, data = credit, horizontal = T,
+        main = "Conditional Boxplot of Balance vs Gender",
+        ylab = "Gender", las = 1)
+dev.off()
+
+png('../../images/conditional-boxplot-student.png')
+boxplot(Balance ~ Student, data = credit, horizontal = T,
+        main = "Conditional Boxplot of Balance vs Student",
+        ylab = "Student", las = 1)
+dev.off()
+
+png('../../images/conditional-boxplot-married.png')
+boxplot(Balance ~ Married, data = credit, horizontal = T,
+        main = "Conditional Boxplot of Balance vs Married",
+        ylab = "Married", las = 1)
+dev.off()
+
+png('../../images/conditional-boxplot-ethnicity.png')
+boxplot(Balance ~ Ethnicity, data = credit, horizontal = T,
+        main = "Conditional Boxplot of Balance vs Ethnicity",
+        ylab = "Ethnicity", las = 1)
+dev.off()
