@@ -1,0 +1,14 @@
+Coefficients of OLS Regression on Balance
+                    Estimate Std. Error  t value Pr(>|t|)
+(Intercept)        -479.2079    35.7739 -13.3954   0.0000
+Income               -7.8031     0.2342 -33.3136   0.0000
+Limit                 0.1909     0.0328   5.8241   0.0000
+Rating                1.1365     0.4909   2.3152   0.0211
+Cards                17.7245     4.3410   4.0830   0.0001
+Age                  -0.6139     0.2940  -2.0882   0.0374
+Education            -1.0989     1.5980  -0.6877   0.4921
+GenderFemale        -10.6532     9.9140  -1.0746   0.2832
+StudentYes          425.7474    16.7226  25.4594   0.0000
+MarriedYes           -8.5339    10.3629  -0.8235   0.4107
+EthnicityAsian       16.8042    14.1191   1.1902   0.2347
+EthnicityCaucasian   10.1070    12.2099   0.8278   0.4083
