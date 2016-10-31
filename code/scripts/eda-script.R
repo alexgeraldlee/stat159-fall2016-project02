@@ -162,3 +162,14 @@ png('../../images/scatterplot-matrix.png')
 plot(credit_quant)
 dev.off()
 
+#ANOVA's between Balance and the qualitative variables
+credit_anova <- summary(aov(Balance ~ Gender + Student + 
+                              Married + Ethnicity, data = credit, 
+                            projections = T))
+
+sink(output_file, append = T)
+cat("\nANOVA between Balance and qualitative variables\n")
+credit_anova
+sink()
+
+#conditional boxplots of Balance against qualitative variables
