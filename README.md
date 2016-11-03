@@ -1,4 +1,4 @@
-#Project 2 Authors: Alexander Lee & Youngshin Kim
+#Project 2 Authors: Alexander Lee & Youngshim Kim
 
 E-mails:
 	alexgeraldlee@berkeley.edu
