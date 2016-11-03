@@ -1,8 +1,9 @@
-#Project 2 Authors: Alexander Lee & Youngshim Kim
+#Project 2: Predictive Modeling Process 
+Authors: Alexander Lee & Youngshin Kim
 
 E-mails:
 	alexgeraldlee@berkeley.edu
-	[Youngshim's email]
+	youngshin.kim@berkeley.edu
 
 ##File Structure
 
