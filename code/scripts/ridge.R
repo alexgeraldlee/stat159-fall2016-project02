@@ -4,10 +4,10 @@ credit_train <- read.csv('../../data/train-set-data.csv')
 credit_test <- read.csv('../../data/test-set-data.csv')
 
 grid <- 10^seq(10, -2, length=100)
-train_x <- model.matrix(Balance~.,credit_train)[,-1]
+train_x <- model.matrix(Balance~.,credit_train)[,-(1:4)]
 train_y <- credit_train$Balance
 
-test_x <- model.matrix(Balance~., credit_test)[,-1]
+test_x <- model.matrix(Balance~., credit_test)[,-(1:4)]
 test_y <- credit_test$Balance
 
 #set seed to the best seed to ensure reproducibility
