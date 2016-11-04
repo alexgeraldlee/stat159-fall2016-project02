@@ -4,7 +4,7 @@ credit_train <- read.csv('../../data/train-set-data.csv')[,-(1:3)]
 credit_test <- read.csv('../../data/test-set-data.csv')[,-(1:3)]
 
 #set seed to the best seed to ensure reproducibility
-set.seed(42)
+set.seed(41)
 
 #perform lasso regression on training data
 plsr_mod <- plsr(Balance~., 
