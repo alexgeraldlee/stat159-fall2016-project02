@@ -1,0 +1,5 @@
+#Data
+
+The data we use in this project is the credit data and it includes variable Balance, the variable we are trying to predict, and ten predictors that we use
+to predict Balance.  These predictors are Income, Limit, Rating, Cards, Age, Education, GenderFemale, StudentYes, MarriedYes, EthnicityAsian, EthnicityCaucasian.  The last two predictors were originally one predictor, but
+it was expanded as a result of dummifying the values.
