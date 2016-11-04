@@ -29,19 +29,19 @@ best_ridge <- ridge_mod$glmnet.fit$beta[,best_ridge_number]
 plot(ridge_mod)
 
 #calculate the MSE
-ridge_pred <- predict(ridge_mod, s = best_ridge_number, 
+ridge_pred <- predict(ridge_mod, s = best_ridge_number,
                       newx = test_x)
 ridge_mse <- mean((ridge_pred - test_y)^2)
 
 #refit the model to the full data
 credit <- read.csv('../../data/Credit.csv')
 
-credit_x <- model.matrix(Balance~., credit)[,-1]
+credit_x <- model.matrix(Balance~., credit)[,-(1:3)]
 credit_y <- credit$Balance
 
 credit_full <- glmnet(credit_x, credit_y, alpha=0)
 credit_pred <- predict(credit_full, s = best_ridge_number, type="coefficients")
 
 #save the relevant data to best-ridge.RData
-save(best_ridge, credit_pred, best_ridge_number, ridge_mse, 
+save(best_ridge, credit_pred, best_ridge_number, ridge_mse,
      file = rdata_output)
