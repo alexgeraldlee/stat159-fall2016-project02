@@ -1,5 +1,6 @@
 #Project 2: Predictive Modeling Process 
 Authors: Alexander Lee & Youngshin Kim
+
 Github html: https://github.com/alexgeraldlee/stat159-fall2016-project02
 
 E-mails:
