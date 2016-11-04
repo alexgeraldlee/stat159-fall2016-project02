@@ -5,6 +5,3 @@ OLS is the most simple regression method that tries to fit a line that
 minimizes the residual sum of squares.  The rest are all regularization method. Ridge and lasso regressions are shrinkage methods that put a 
 penalty to our linear model and we try to find the best model with the 
 smallest lambda. Lasso is different from ridge in that lasso does variable selection.  It cuts out predictors that are not useful to predicting Balane.  PCR and PLSR regressions perform dimension reduction, and are useful when the predictors are correlated to each other.
-
-For OLS, we simply fit the lm function in R.  For the rest of the methods,
-we first use 10 fold cross-validation to fit method on train set and find the best model based on minimum lambda for ridge/lasso and minimum prediction error sum of squares for pcr and plsr.  Next, we apply the best model to test set and calculate MSE.  Finally, we choose the regression method that gives us the lowest MSE.

@@ -1,0 +1,5 @@
+#Conclusion
+
+From the tables and figures above, we can conclude that PCR/PLSR give us 
+the best estimate of Balance.  We can make this conclusion, because 
+PCR/PLSR gave us the lowest MSE (0.05), which means the predicted values and the actual values weren't that much different from each other.  Also, from the figures above, we can assume that there were only a couple predictors that were actually important in estimating Balance.  The most noticeable predictors are Limit and Student.  It's clear in the figures that the coefficients are high for these predictors.

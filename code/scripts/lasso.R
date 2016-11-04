@@ -42,11 +42,11 @@ credit <- read.csv('../../data/Credit.csv')[,-(1:2)]
 credit_x <- model.matrix(Balance~., credit)[,-1]
 credit_y <- credit$Balance
 
-credit_full <- glmnet(credit_x, credit_y, alpha = 1)
-credit_pred <- predict(credit_full, s = best_lasso_number, type="coefficients")
+credit_full_lasso <- glmnet(credit_x, credit_y, alpha = 1)
+credit_pred_lasso <- predict(credit_full_lasso, s = best_lasso_number, type="coefficients")
 
 #save the relevant data to best-lasso.RData
-save(best_lasso, credit_pred, best_lasso_number, lasso_mse, 
+save(best_lasso, credit_pred_lasso, best_lasso_number, lasso_mse, 
      file = '../../data/best-lasso.RData')
 
 
