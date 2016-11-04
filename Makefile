@@ -22,13 +22,13 @@ eda: data/eda-output.txt
 data/eda-output.txt:
 	cd $(scripts) && Rscript eda-script.R
 
-#regressions - 5 types (OLS, lasso, ridge, pcr, pslr)
+#regressions - 5 types (OLS, lasso, ridge, pcr, plsr)
 regression:
 	make ols
 	make ridge
 	make lasso
 	make pcr
-	make pslr
+	make plsr
 
 ols:
 	cd $(scripts) && Rscript regressions.R
@@ -42,8 +42,8 @@ lasso:
 pcr:
 	cd $(scripts) && Rscript pcr.R
 
-pslr:
-	cd $(scripts) && Rscript pslr.R
+plsr:
+	cd $(scripts) && Rscript plsr.R
 
 
 #report - generate the report from the components
