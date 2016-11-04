@@ -1,0 +1,7 @@
+Session-info
+
+R packages
+- pls; version 2.5-0; date 2015-08-22
+- glmnet; version 2.0-5; date 2016-03-17
+
+git version: 2.10.0
