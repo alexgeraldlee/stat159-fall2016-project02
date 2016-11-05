@@ -129,9 +129,15 @@ clean: will delete the generated report (pdf and/or html)
 
 	-Use pls library for pcr/plsr
 
+4. Get the best model
+	
+	-Calculate MSE for each method by applying the best model to test set
+
+	-Take the model with the lowest MSE
+
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-
+License for code in LICENSE file 
 
