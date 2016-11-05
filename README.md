@@ -25,7 +25,6 @@ stat159-fall2016-project2/
 			pcr.R
 			plsr.R
 			regressions.R
-			report-data.R
 			ridge.R
 	data/
 		Credit.csv
@@ -39,7 +38,7 @@ stat159-fall2016-project2/
 		raw-credit.csv
 		test-set-data.csv
 		train-set-data.csv
-		...
+		README.md
 	images/
 		barchart-ethnicity.png
 		barchart-gender.png
@@ -63,8 +62,11 @@ stat159-fall2016-project2/
 		histogram-income.png
 		histogram-limit.png
 		histogram-rating.png
+		lasso-plot.png
+		pcr-plot.png
+		plsr-plot.png
+		ridge-plot.png
 		scatterplot-matrix.png
-		...
 	report/
 		report.pdf
 		report.Rmd
@@ -76,8 +78,9 @@ stat159-fall2016-project2/
 			04-analysis.Rmd
 			05-results.Rmd
 			06-conclusions.Rmd
-	slides/
-		...
+		slides/
+			slides.Rmd
+			slides.html
 ```
 
 #Phony targets in Makefile
