@@ -43,8 +43,8 @@ credit_x <- model.matrix(Balance~., credit)[,-(1:3)]
 credit_y <- credit$Balance
 
 credit_full <- glmnet(credit_x, credit_y, alpha=0)
-credit_pred <- predict(credit_full, s = best_ridge_number, type="coefficients")
+ridge_coefficients <- predict(credit_full, s = best_ridge_number, type="coefficients")
 
 #save the relevant data to best-ridge.RData
-save(best_ridge, credit_pred, best_ridge_number, ridge_mse,
+save(best_ridge, ridge_coefficients, best_ridge_number, ridge_mse,
      file = rdata_output)

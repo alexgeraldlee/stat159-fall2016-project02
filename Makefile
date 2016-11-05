@@ -1,6 +1,4 @@
 scripts = code/scripts
-parts = report/sections
-reports = report/sections
 mds = $(wildcard report/sections/*.Rmd)
 
 all: eda regression report
@@ -49,11 +47,14 @@ plsr:
 
 
 #report - generate the report from the components
-report: $(mds)
+report: 
+	make report/report.Rmd
+
+report/report.Rmd:
 	pandoc -s $(mds) -o report/report.Rmd
 	make report/report.pdf
 
-report/report.pdf:
+report/report.pdf: report/report.Rmd
 	cd report && Rscript -e "library('knitr'); library('rmarkdown'); render('report.Rmd', 'pdf_document')"
 
 #remove the final report

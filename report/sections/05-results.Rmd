@@ -1,11 +1,11 @@
 #Results
 
 ```{r, echo = FALSE}
-load('../../data/best-ols.RData')
-load('../../data/best-ridge.RData')
-load('../../data/best-lasso.RData')
-load('../../data/best-pcr.RData')
-load('../../data/best-plsr.RData')
+load('../data/best-ols.RData')
+load('../data/best-ridge.RData')
+load('../data/best-lasso.RData')
+load('../data/best-pcr.RData')
+load('../data/best-plsr.RData')
 library(xtable)
 options(xtable.comment = FALSE)
 ```
@@ -86,3 +86,4 @@ axis(1, at = 1:12, labels = label)
 ```
 
 These are the 'official' regression coefficients that were calculated by applying the best model to the full data set.
+
