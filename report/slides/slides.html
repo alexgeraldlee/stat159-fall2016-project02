@@ -90,22 +90,37 @@ Alexander Lee and Youngshin Kim
 </ul></li>
 <li>test group
 <ul>
-<li>use the results of the training group to predice the results of the test group</li>
+<li>use the results of the training group to predict the results of the test group</li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
-<div id="original-least-squares" class="slide section level1">
-<h1>Original Least Squares</h1>
-<p>The classic regression method is the original least squares (OLS) regression.</p>
-<pre><code>##        (Intercept)             Income              Limit 
-##       -479.2078706         -7.8031018          0.1909067 
-##             Rating              Cards                Age 
-##          1.1365265         17.7244836         -0.6139088 
-##          Education       GenderFemale         StudentYes 
-##         -1.0988553        -10.6532477        425.7473595 
-##         MarriedYes     EthnicityAsian EthnicityCaucasian 
-##         -8.5339006         16.8041792         10.1070252</code></pre>
+<div id="results" class="slide section level1">
+<h1>Results</h1>
+<pre><code>                        OLS   Ridge   Lasso     PCR    PLSR
+Income              -7.8031 -0.5677 -0.5518 -0.5954 -0.5953
+Limit                0.1909  0.7084  0.8529  1.0287  1.0227
+Rating               1.1365  0.5969  0.4342  0.3041  0.3098
+Cards               17.7245  0.0504  0.0483  0.0624  0.0625
+Age                 -0.6139 -0.0190 -0.0107 -0.0161 -0.0139
+Education           -1.0989 -0.0074  0.0000 -0.0103 -0.0094
+GenderFemale       -10.6532 -0.0035  0.0000 -0.0039 -0.0045
+StudentYes         425.7474  0.2732  0.2672  0.2784  0.2794
+MarriedYes          -8.5339 -0.0095  0.0000 -0.0062 -0.0071
+EthnicityAsian      16.8042  0.0162  0.0000  0.0145  0.0143
+EthnicityCaucasian  10.1070  0.0253  0.0078  0.0252  0.0252</code></pre>
+<ul>
+<li>The coefficients from the OLS regression are drastically different from the other regressions
+<ul>
+<li>this is to be expected since the OLS regression is the weakest of these methods.</li>
+</ul></li>
+<li>ridge/lasso and pcr/plsr are very similar
+<ul>
+<li>they are similar processes, so they reasonably have similar numbers</li>
+</ul></li>
+</ul>
+<pre><code>     Ridge  Lasso    PCR   PLSR
+MSE 0.9703 1.0044 0.0472 0.0473</code></pre>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->

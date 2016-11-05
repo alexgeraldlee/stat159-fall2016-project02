@@ -18,7 +18,9 @@ pcr_pred <- predict(pcr_mod, credit_test, ncomp = best_pcr_number)
 pcr_mse <- mean((pcr_pred - credit_test[,"Balance"]) ^ 2)
 
 #plot the pcr
+png('../../images/pcr-plot.png')
 validationplot(pcr_mod, val.type = "MSEP")
+dev.off()
 
 #run the pcr on the full data
 credit <- read.csv('../../data/Credit.csv')

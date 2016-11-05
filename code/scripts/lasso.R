@@ -1,4 +1,5 @@
 library(glmnet)
+library(methods)
 #import the train and test sets
 train <- read.csv('../../data/train-set-data.csv')[,-(1:3)]
 test <- read.csv('../../data/test-set-data.csv')[,-(1:3)]
@@ -29,7 +30,9 @@ best_lasso_number <- which(lasso_mod$lambda == lasso_mod$lambda.min)
 best_lasso <- lasso_mod$glmnet.fit$beta[,best_lasso_number]
 
 #plot the cross-validation errors in terms of the tuning parameter
+png('../../images/lasso-plot.png')
 plot(lasso_mod)
+dev.off()
 
 #calculate the MSE
 lasso_pred <- predict(lasso_mod, s = best_lasso_number, 

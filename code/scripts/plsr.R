@@ -23,7 +23,9 @@ plsr_pred <- predict(plsr_mod, credit_test, ncomp = best_plsr_number)
 plsr_mse <- mean((plsr_pred - credit_test[,"Balance"]) ^ 2)
 
 #plot the plsr
+png('../../images/plsr-plot.png')
 validationplot(plsr_mod, val.type = "MSEP")
+dev.off()
 
 #run the plsr on the full data
 credit <- read.csv('../../data/Credit.csv')

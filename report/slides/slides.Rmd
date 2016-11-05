@@ -50,13 +50,47 @@ head(round(credit[3:8], 4), 10)
     * training group
         * regression applied to this group for a predictor
     * test group
-        * use the results of the training group to predice the results of the test group
+        * use the results of the training group to predict the results of the test group
 
-#Original Least Squares
 
-The classic regression method is the original least squares (OLS) regression.
+#Results
 
-```{r, echo=FALSE}
+```{r, echo = FALSE}
 load('../../data/best-ols.RData')
-ols_coefficients
+load('../../data/best-ridge.RData')
+load('../../data/best-lasso.RData')
+load('../../data/best-pcr.RData')
+load('../../data/best-plsr.RData')
+library(xtable)
+options(xtable.comment = FALSE)
 ```
+
+```{r, echo = FALSE, comment = NA}
+reg_coef = matrix(c(ols_coefficients[-1], best_ridge, best_lasso, best_pcr, best_plsr), nrow = 11)
+
+reg_coef = as.data.frame(reg_coef)
+
+rownames(reg_coef) = c('Income', 'Limit', 'Rating', 'Cards', 'Age', 'Education', 'GenderFemale', 'StudentYes', 'MarriedYes', 'EthnicityAsian', 'EthnicityCaucasian')
+
+colnames(reg_coef) = c('OLS', 'Ridge', 'Lasso', 'PCR', 'PLSR')
+
+round(reg_coef, 4)
+```
+
+* The coefficients from the OLS regression are drastically different from the other regressions 
+    * this is to be expected since the OLS regression is the weakest of these methods. 
+* ridge/lasso and pcr/plsr are very similar
+    * they are similar processes, so they reasonably have similar numbers
+
+```{r, echo = FALSE, comment = NA}
+mse = matrix(c(ridge_mse, lasso_mse, pcr_mse, plsr_mse), nrow = 1)
+
+mse = as.data.frame(mse)
+
+rownames(mse) = 'MSE'
+
+colnames(mse) = c('Ridge', 'Lasso', 'PCR', 'PLSR')
+
+round(mse, 4)
+```
+

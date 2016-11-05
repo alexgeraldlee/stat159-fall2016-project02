@@ -1,7 +1,7 @@
 #Introduction
 
-This project aims to predict data using differnet methods.
-Methods used are ols, ridge, lasso, principal component regression,
+This project aims to predict data using different methods.
+Methods used are original least squares regression, ridge, lasso, principal component regression,
 and partial least sqaures regression.  We want to be able to 
 predict variable 'Balance' from ten predictors.  Before we begin,
 we will first make some necessary changes to our dataset using

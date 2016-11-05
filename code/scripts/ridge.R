@@ -1,4 +1,5 @@
 library(glmnet)
+library(methods)
 #import the train and test sets
 credit_train <- read.csv('../../data/train-set-data.csv')
 credit_test <- read.csv('../../data/test-set-data.csv')
@@ -26,7 +27,9 @@ best_ridge_number <- which(ridge_mod$lambda == ridge_mod$lambda.min)
 best_ridge <- ridge_mod$glmnet.fit$beta[,best_ridge_number]
 
 #plot the cross-validation errors in terms of the tuning parameter
+png('../../images/ridge-plot.png')
 plot(ridge_mod)
+dev.off()
 
 #calculate the MSE
 ridge_pred <- predict(ridge_mod, s = best_ridge_number,

@@ -1,0 +1,3 @@
+#Data
+
+This directory contains the [Credit.csv](http://www-bcf.usc.edu/~gareth/ISL/Credit.csv) file from the book *An Introduction to Statistical Learning* by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani. This directory also contains several .RData files, which contain the R data structures that contain the results of the regressions, the cleaned `Credit.csv` data, the training and testing subsets of the cleaned data, and two .txt files containing summary statistics and other computations related to the data.
